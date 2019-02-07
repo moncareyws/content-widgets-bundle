@@ -1,0 +1,29 @@
+{% if not widget.hidden or config.edit %}
+<div id="{{ config.type }}-{{ widget.id }}" class="widget {{ config.type }}{% if widget.hidden %} hidden-widget{% endif %}"
+     {% if config.edit %} data-widget-editor data-widget-id="{{ widget.id }}" data-widget-type="{{ config.type }}" data-layout-widget="{{ config.isLayout ? 'true' : 'false' }}"
+     data-root-path="{{ path('content_widgets_root')|trim('/', 'right') }}" draggable="true"{% endif %}>
+    {% if config.edit -%}
+    <div data-widget-toolbar>
+        <div class="float-left">
+            <h6><strong>{{ config.type }}</strong></h6>
+        </div>
+        <div class="float-right">
+            <div class="button-group small align-right">
+                <a class="button hollow top" data-tooltip title="Move" data-move-widget><i class="fa fa-arrows"></i></a>
+                <a class="button hollow top toggle-hidden{% if widget.hidden %} widget-is-hidden{% endif %}" data-tooltip title="{{ widget.hidden ? 'Show' : 'Hide' }}" data-toggle-hidden>
+                    <i class="fa fa-eye icon-show"></i>
+                    <i class="fa fa-eye-slash icon-hide"></i>
+                </a>
+                <a class="button hollow top" data-tooltip title="Edit" data-edit-widget><i class="fa fa-pencil"></i></a>
+                <a class="button hollow alert top" data-tooltip title="Delete" data-delete-widget><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% block widget %}
+
+    {% endblock %}
+
+</div>
+{% endif %}

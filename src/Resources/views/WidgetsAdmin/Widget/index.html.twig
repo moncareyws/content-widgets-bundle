@@ -1,0 +1,12 @@
+{% extends '@SamuelmcFdnContentWidgets/Shared/page.html.twig' %}
+
+{% block content %}
+
+    <h1>Widget\widgets</h1>
+    <a class="button" href="{{ path('widget_create') }}">Create a new Widget\Widget</a>    {% for widget\Widget in widget\Widgets %}
+
+    <div class="small-12 column widget\Widget">
+        {{ include('@SamuelmcFdnContentWidgets/Widget\Widget/Widget\WidgetViewMode/widget\Widget_teaser.html.twig') }}
+    </div>
+    {% endfor %}
+{% endblock %}

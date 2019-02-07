@@ -1,0 +1,32 @@
+<div class="container-versions">
+    <h2>Versions</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Version</th>
+                <th>Created</th>
+                <th>Published</th>
+                <th>
+                    <span class="show-for-sr">Actions</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for version in versions %}
+                <tr>
+                    <td>{{ version.versionIndex }}</td>
+                    <td>{{ version.createdAt|date('d/m/Y \@ H:i') }}</td>
+                    <td>{% if version.isPublishedVersion %}<i class="fa fa-check"></i>{% endif %}</td>
+                    <td>
+                        <div class="button-group small">
+                            <a class="button" data-view-version="{{ version.id }}"><i class="fa fa-eye"></i> Preview</a>
+                            <a class="button warning" data-restore-version="{{ version.id }}"><i class="fa fa-refresh"></i> Restore</a>
+                            <a class="button success" data-publish-version="{{ version.id }}"><i class="fa fa-globe"></i> Publish</a>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a class="close-button" data-close>&times;</a>
+</div>

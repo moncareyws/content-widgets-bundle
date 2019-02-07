@@ -1,0 +1,42 @@
+content_widgets_root:
+    path: /
+
+widget_types:
+    path:     /widget/types
+    defaults: { _controller: "SamuelmcFdnContentWidgetsBundle:ContentWidgets:getWidgetTypes" }
+    methods:  GET
+
+create_widget:
+    path:     /container/{name}/add-widget/{type}
+    defaults: { _controller: "SamuelmcFdnContentWidgetsBundle:ContentWidgets:createWidget" }
+    methods:  [GET, POST]
+
+edit_widget:
+    path:     /widget/{id}/edit
+    defaults: { _controller: "SamuelmcFdnContentWidgetsBundle:ContentWidgets:editWidget" }
+    methods:  [GET, POST]
+
+toggle_widget:
+    path:     /widget/{id}/toggle-hidden
+    defaults: { _controller: "SamuelmcFdnContentWidgetsBundle:ContentWidgets:toggleWidget" }
+    methods:  [GET, POST]
+
+delete_widget:
+    path:     /widget/{id}/delete
+    defaults: { _controller: "SamuelmcFdnContentWidgetsBundle:ContentWidgets:deleteWidget" }
+    methods:  [GET, DELETE]
+
+move_widget:
+    path:     /widget/{id}/move-to/{containerName}/position/{position}
+    defaults: { _controller: "SamuelmcFdnContentWidgetsBundle:ContentWidgets:moveWidget" }
+    methods:  GET
+
+save_container:
+    path:     /container/{name}/save
+    defaults: { _controller: "SamuelmcFdnContentWidgetsBundle:ContentWidgets:saveContainer" }
+    methods:  [GET, POST]
+
+container_versions:
+    path:     /container/{name}/versions
+    defaults: { _controller: "SamuelmcFdnContentWidgetsBundle:ContentWidgets:getContainerVesions" }
+    methods:  [GET, POST]

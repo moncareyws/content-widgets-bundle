@@ -1,0 +1,48 @@
+services:
+#    samuelmc_fdn_content_widgets.example:
+#        class: MoncaretWS\ContentWidgetsBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
+    # default configuration for services in *this* file
+
+    widget_container_factory:
+        class: MoncaretWS\ContentWidgetsBundle\Service\WidgetContainerFactory
+        arguments:
+            $doctrine: '@doctrine'
+
+    widget_factory:
+        class: MoncaretWS\ContentWidgetsBundle\Service\WidgetFactory
+        arguments:
+            $doctrine: '@doctrine'
+            $manager: '@widget_manager'
+            $containerFactory: '@widget_container_factory'
+            $formFactory: '@form.factory'
+            $router: '@router'
+
+    widget_container_manager:
+        class: MoncaretWS\ContentWidgetsBundle\Service\WidgetContainerManager
+        arguments:
+            $registry: '@doctrine'
+            $containerFactory: '@widget_container_factory'
+
+    widget_manager:
+        class: MoncaretWS\ContentWidgetsBundle\Service\WidgetManager
+        arguments:
+            $registry: '@doctrine'
+
+    widget_renderer:
+        class: MoncaretWS\ContentWidgetsBundle\Service\WidgetRenderer
+        arguments:
+            $widgetManager: '@widget_manager'
+            $containerManager: '@widget_container_manager'
+
+    twig.filter.widget_extention:
+        class: MoncaretWS\ContentWidgetsBundle\Twig\Extension\WidgetExtension
+        arguments:
+            $widgetRenderer: '@widget_renderer'
+        tags:
+            - { name: twig.extension }
+
+    widget_doctrine_event_listnener:
+        class: MoncaretWS\ContentWidgetsBundle\EventListener\DoctrineEventSubscriber
+        tags:
+            - { name: doctrine.event_subscriber , connection: default }
