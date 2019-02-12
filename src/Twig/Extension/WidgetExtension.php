@@ -2,7 +2,7 @@
 
 namespace MoncaretWS\ContentWidgetsBundle\Twig\Extension;
 
-use MoncaretWS\ContentWidgetsBundle\Service\WidgetRenderer;
+use MoncaretWS\ContentWidgetsBundle\Twig\Helper\WidgetRenderer;
 
 class WidgetExtension extends \Twig_Extension {
 

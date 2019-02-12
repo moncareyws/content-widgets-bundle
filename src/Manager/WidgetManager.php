@@ -5,7 +5,7 @@
  * 16/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Service;
+namespace MoncaretWS\ContentWidgetsBundle\Manager;
 
 use Doctrine\Bundle\DoctrineBundle\Registry;
 use Doctrine\Common\Util\Inflector;

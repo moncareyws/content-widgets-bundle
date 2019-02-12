@@ -5,12 +5,14 @@
  * 14/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Service;
+namespace MoncaretWS\ContentWidgetsBundle\Twig\Helper;
 
 use MoncaretWS\ContentWidgetsBundle\Entity\Container\MasterContainer;
 use MoncaretWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget;
 use MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget;
 use MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
+use MoncaretWS\ContentWidgetsBundle\Manager\WidgetContainerManager;
+use MoncaretWS\ContentWidgetsBundle\Manager\WidgetManager;
 
 
 /**

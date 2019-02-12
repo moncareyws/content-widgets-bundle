@@ -5,7 +5,7 @@
  * 15/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Service;
+namespace MoncaretWS\ContentWidgetsBundle\Factory;
 
 
 use Doctrine\Bundle\DoctrineBundle\Registry as Doctrine;

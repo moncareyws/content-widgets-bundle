@@ -1,6 +1,0 @@
-imports:
-    - { resource: services.yml }
-
-twig:
-    paths:
-        '%kernel.project_dir%/src/Samuelmc/FdnContentWidgetsBundle/Resources/views': SamuelmcFdnContentWidgetsBundle

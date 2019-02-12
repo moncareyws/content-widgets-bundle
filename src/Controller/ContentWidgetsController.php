@@ -21,7 +21,8 @@ class ContentWidgetsController extends Controller {
     /**
      * Lists all Widget types.
      */
-    public function getWidgetTypesAction() {
+    public function getWidgetTypes(): WidgetPluginResponse
+    {
 
         $response = new WidgetPluginResponse();
         $types    = $this->get('widget_manager')->getWidgetTypesHierachy();
@@ -40,7 +41,8 @@ class ContentWidgetsController extends Controller {
      *
      * @return WidgetPluginResponse
      */
-    public function createWidgetAction(Request $request, WidgetContainer $container, $type) {
+    public function createWidget(Request $request, WidgetContainer $container, $type): WidgetPluginResponse
+    {
 
         $response = new WidgetPluginResponse();
         $widgetCreation = $this->get('widget_factory')->creteWidgetByType($type, $container, $request);
@@ -74,7 +76,8 @@ class ContentWidgetsController extends Controller {
      *
      * @return WidgetPluginResponse
      */
-    public function editWidgetAction(Request $request, Widget $widget) {
+    public function editWidget(Request $request, Widget $widget): WidgetPluginResponse
+    {
 
         $response = new WidgetPluginResponse();
 
@@ -108,7 +111,8 @@ class ContentWidgetsController extends Controller {
      *
      * @return WidgetPluginResponse
      */
-    public function toggleWidgetAction(Widget $widget) {
+    public function toggleWidget(Widget $widget): WidgetPluginResponse
+    {
 
         $response = new WidgetPluginResponse();
 
@@ -130,7 +134,8 @@ class ContentWidgetsController extends Controller {
      *
      * @return WidgetPluginResponse
      */
-    public function deleteWidgetAction(Request $request, Widget $widget) {
+    public function deleteWidget(Request $request, Widget $widget): WidgetPluginResponse
+    {
 
         $response = new WidgetPluginResponse();
 
@@ -159,7 +164,8 @@ class ContentWidgetsController extends Controller {
             ]));
     }
 
-    public function moveWidgetAction(Widget $widget, $containerName, $position) {
+    public function moveWidget(Widget $widget, $containerName, $position): WidgetPluginResponse
+    {
 
         $response = new WidgetPluginResponse();
         $container = $this->get('widget_container_manager')->getContainerByName($containerName);
@@ -205,7 +211,8 @@ class ContentWidgetsController extends Controller {
      *
      * @return WidgetPluginResponse
      */
-    public function saveContainerAction(Request $request, MasterContainer $container) {
+    public function saveContainer(Request $request, MasterContainer $container): WidgetPluginResponse
+    {
 
         $response = new WidgetPluginResponse();
 
@@ -233,7 +240,8 @@ class ContentWidgetsController extends Controller {
             ]));
     }
 
-    public function getContainerVesionsAction(MasterContainer $container) {
+    public function getContainerVesions(MasterContainer $container): WidgetPluginResponse
+    {
 
         $response = new WidgetPluginResponse();
 

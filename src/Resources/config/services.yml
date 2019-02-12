@@ -5,12 +5,12 @@ services:
     # default configuration for services in *this* file
 
     widget_container_factory:
-        class: MoncaretWS\ContentWidgetsBundle\Service\WidgetContainerFactory
+        class: MoncaretWS\ContentWidgetsBundle\Factory\WidgetContainerFactory
         arguments:
             $doctrine: '@doctrine'
 
     widget_factory:
-        class: MoncaretWS\ContentWidgetsBundle\Service\WidgetFactory
+        class: MoncaretWS\ContentWidgetsBundle\Factory\WidgetFactory
         arguments:
             $doctrine: '@doctrine'
             $manager: '@widget_manager'
@@ -19,18 +19,18 @@ services:
             $router: '@router'
 
     widget_container_manager:
-        class: MoncaretWS\ContentWidgetsBundle\Service\WidgetContainerManager
+        class: MoncaretWS\ContentWidgetsBundle\Manager\WidgetContainerManager
         arguments:
             $registry: '@doctrine'
             $containerFactory: '@widget_container_factory'
 
     widget_manager:
-        class: MoncaretWS\ContentWidgetsBundle\Service\WidgetManager
+        class: MoncaretWS\ContentWidgetsBundle\Manager\WidgetManager
         arguments:
             $registry: '@doctrine'
 
     widget_renderer:
-        class: MoncaretWS\ContentWidgetsBundle\Service\WidgetRenderer
+        class: MoncaretWS\ContentWidgetsBundle\Twig\Helper\WidgetRenderer
         arguments:
             $widgetManager: '@widget_manager'
             $containerManager: '@widget_container_manager'

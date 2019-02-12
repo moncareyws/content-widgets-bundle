@@ -14,7 +14,20 @@ class ContentWidgetsExtension extends Extension implements PrependExtensionInter
 
     public function prepend(ContainerBuilder $container)
     {
-        // TODO: Implement prepend() method.
+        foreach ($container->getExtensionConfig('twig') as $twigConfig) {
+
+            if (!isset($twigConfig['paths']))
+                $twigConfig['paths'] = [];
+
+            $twigConfig['paths'][__DIR__.'/../Resources/views'] = 'content_widgets';
+
+//            if (!isset($twigConfig['form_themes']))
+//                $twigConfig['form_themes'] = [];
+//
+//            $twigConfig['form_themes'][] = '@foundation/form/fields.html.twig';
+
+            $container->loadFromExtension('twig', $twigConfig);
+        }
     }
 
     /**

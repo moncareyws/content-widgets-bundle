@@ -5,7 +5,7 @@
  * 16/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Service;
+namespace MoncaretWS\ContentWidgetsBundle\Manager;
 
 
 use Doctrine\Bundle\DoctrineBundle\Registry;
@@ -14,7 +14,9 @@ use Doctrine\ORM\Mapping\ClassMetadata;
 use MoncaretWS\ContentWidgetsBundle\Entity\Container\MasterContainer;
 use MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
 use MoncaretWS\ContentWidgetsBundle\Entity\Container\ContainerVersion;
+use MoncaretWS\ContentWidgetsBundle\Repository\ContainerVersionRepository;
 use MoncaretWS\ContentWidgetsBundle\Repository\WidgetContainerRepository;
+use MoncaretWS\ContentWidgetsBundle\Factory\WidgetContainerFactory;
 
 
 class WidgetContainerManager {
@@ -30,7 +32,7 @@ class WidgetContainerManager {
     private $repository;
 
     /**
-     * @var WidgetContainerRepository
+     * @var ContainerVersionRepository
      */
     private $versionsRepository;
 
