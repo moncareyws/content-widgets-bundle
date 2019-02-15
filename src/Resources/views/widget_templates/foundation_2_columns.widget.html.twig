@@ -2,12 +2,14 @@
 
 {% block widget %}
 
-    <div class="row medium-up-2">
-        <div class="column">
-            {{ widget_container(widget.column1) }}
-        </div>
-        <div class="column">
-            {{ widget_container(widget.column2)}}
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x medium-up-2">
+            <div class="cell">
+                {{ widget_container(widget.column1) }}
+            </div>
+            <div class="cell">
+                {{ widget_container(widget.column2)}}
+            </div>
         </div>
     </div>
 {% endblock %}
