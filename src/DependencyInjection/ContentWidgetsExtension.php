@@ -26,6 +26,23 @@ class ContentWidgetsExtension extends Extension implements PrependExtensionInter
 //
 //            $twigConfig['form_themes'][] = '@foundation/form/fields.html.twig';
 
+            if (!isset($twigConfig['globals']))
+                $twigConfig['globals'] = [];
+
+            if (!isset($twigConfig['globals']['js_files']))
+                $twigConfig['globals']['js_files'] = [];
+
+            $twigConfig['globals']['js_files']+= [
+                '/bundles/contentwidgets/node_modules/trumbowyg/dist/trumbowyg.js' => 10,
+                '/bundles/contentwidgets/node_modules/spin/dist/spin.js' => 10,
+                '/bundles/contentwidgets/node_modules/mustache/mustache.js' => 10,
+                '/bundles/contentwidgets/dist/js/jquery.spin.js' => 20,
+                '/bundles/contentwidgets/dist/js/foundation.ajaxImage.js' => 21,
+                '/bundles/contentwidgets/dist/js/foundation.trumbowygEditor.js' => 15,
+                '/bundles/contentwidgets/dist/js/foundation.widgetContainerEditor.js' => 16,
+                '/bundles/contentwidgets/dist/js/foundation.widgetEditor.js' => 17,
+            ];
+
             $container->loadFromExtension('twig', $twigConfig);
         }
     }
