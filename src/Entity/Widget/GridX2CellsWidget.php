@@ -1,15 +1,15 @@
 <?php
 
-namespace MoncaretWS\ContentWidgetsBundle\Entity\Widget;
+namespace MoncareyWS\ContentWidgetsBundle\Entity\Widget;
 
 use Doctrine\ORM\Mapping as ORM;
-Use MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
+Use MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
 
 /**
  * Foundation2CellsWidget
  *
- * @ORM\Entity(repositoryClass="MoncaretWS\ContentWidgetsBundle\Repository\WidgetRepository")
+ * @ORM\Entity(repositoryClass="MoncareyWS\ContentWidgetsBundle\Repository\WidgetRepository")
  */
 class GridX2CellsWidget extends LayoutWidget
 {
@@ -25,7 +25,7 @@ class GridX2CellsWidget extends LayoutWidget
     /**
      * @var ChildContainer
      *
-     * @ORM\OneToOne(targetEntity="MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
+     * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
      * @ORM\JoinCell(name="cell1_container_id", referencedCellName="id")
      */
     protected $cell1;
@@ -33,7 +33,7 @@ class GridX2CellsWidget extends LayoutWidget
     /**
      * @var ChildContainer
      *
-     * @ORM\OneToOne(targetEntity="MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
+     * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
      * @ORM\JoinCell(name="cell2_container_id", referencedCellName="id")
      */
     protected $cell2;
@@ -142,11 +142,11 @@ class GridX2CellsWidget extends LayoutWidget
     /**
      * Set cell1
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell1
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell1
      *
      * @return GridX2CellsWidget
      */
-    public function setCell1(\MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell1 = null): GridX2CellsWidget
+    public function setCell1(\MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell1 = null): GridX2CellsWidget
     {
         $this->cell1 = $cell1;
 
@@ -156,7 +156,7 @@ class GridX2CellsWidget extends LayoutWidget
     /**
      * Get cell1
      *
-     * @return \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer
+     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer
      */
     public function getCell1(): ChildContainer
     {
@@ -166,11 +166,11 @@ class GridX2CellsWidget extends LayoutWidget
     /**
      * Set cell2
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell2
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell2
      *
      * @return GridX2CellsWidget
      */
-    public function setCell2(\MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell2 = null): GridX2CellsWidget
+    public function setCell2(\MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell2 = null): GridX2CellsWidget
     {
         $this->cell2 = $cell2;
 
@@ -180,7 +180,7 @@ class GridX2CellsWidget extends LayoutWidget
     /**
      * Get cell2
      *
-     * @return \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer
+     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer
      */
     public function getCell2(): ChildContainer
     {
@@ -197,7 +197,7 @@ class GridX2CellsWidget extends LayoutWidget
     /**
      * Set container
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container
      *
      * @return GridX2CellsWidget
      */
@@ -211,7 +211,7 @@ class GridX2CellsWidget extends LayoutWidget
     /**
      * Get container
      *
-     * @return \MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer
+     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer
      */
     public function getContainer(): WidgetContainer
     {

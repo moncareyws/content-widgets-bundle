@@ -5,13 +5,13 @@
  * 20/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\HttpFoundation;
+namespace MoncareyWS\ContentWidgetsBundle\HttpFoundation;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
  * Class WidgetPluginResponse
- * @package MoncaretWS\ContentWidgetsBundle\HttpFoundation
+ * @package MoncareyWS\ContentWidgetsBundle\HttpFoundation
  */
 class WidgetPluginResponse extends JsonResponse {
 

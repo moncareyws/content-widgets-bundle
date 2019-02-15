@@ -1,6 +1,6 @@
 <?php
 
-namespace MoncaretWS\ContentWidgetsBundle\Form\Type;
+namespace MoncareyWS\ContentWidgetsBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -23,7 +23,7 @@ class HtmlWidgetType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'MoncaretWS\ContentWidgetsBundle\Entity\Widget\HtmlWidget'
+            'data_class' => 'MoncareyWS\ContentWidgetsBundle\Entity\Widget\HtmlWidget'
         ));
     }
 

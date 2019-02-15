@@ -6,7 +6,7 @@
  * Time: 21:05
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\EventListener;
+namespace MoncareyWS\ContentWidgetsBundle\EventListener;
 
 use Doctrine\Common\EventSubscriber;
 use Doctrine\Common\Persistence\Event\LoadClassMetadataEventArgs;

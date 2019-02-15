@@ -1,14 +1,14 @@
 <?php
 
-namespace MoncaretWS\ContentWidgetsBundle\Entity\Widget;
+namespace MoncareyWS\ContentWidgetsBundle\Entity\Widget;
 
 use Doctrine\ORM\Mapping as ORM;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer;
 
 /**
  * Foundation3CellsWidget
  *
- * @ORM\Entity(repositoryClass="MoncaretWS\ContentWidgetsBundle\Repository\WidgetRepository")
+ * @ORM\Entity(repositoryClass="MoncareyWS\ContentWidgetsBundle\Repository\WidgetRepository")
  */
 class GridX3CellsWidget extends LayoutWidget
 {
@@ -24,7 +24,7 @@ class GridX3CellsWidget extends LayoutWidget
     /**
      * @var ChildContainer
      *
-     * @ORM\OneToOne(targetEntity="MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
+     * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
      * @ORM\JoinCell(name="cell1_container_id", referencedCellName="id")
      */
     protected $cell1;
@@ -32,7 +32,7 @@ class GridX3CellsWidget extends LayoutWidget
     /**
      * @var ChildContainer
      *
-     * @ORM\OneToOne(targetEntity="MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
+     * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
      * @ORM\JoinCell(name="cell2_container_id", referencedCellName="id")
      */
     protected $cell2;
@@ -40,7 +40,7 @@ class GridX3CellsWidget extends LayoutWidget
     /**
      * @var ChildContainer
      *
-     * @ORM\OneToOne(targetEntity="MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
+     * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
      * @ORM\JoinCell(name="cell3_container_id", referencedCellName="id")
      */
     private $cell3;
@@ -148,11 +148,11 @@ class GridX3CellsWidget extends LayoutWidget
     /**
      * Set cell1
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell1
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell1
      *
      * @return GridX3CellsWidget
      */
-    public function setCell1(\MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell1 = null)
+    public function setCell1(\MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell1 = null)
     {
         $this->cell1 = $cell1;
 
@@ -162,7 +162,7 @@ class GridX3CellsWidget extends LayoutWidget
     /**
      * Get cell1
      *
-     * @return \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer
+     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer
      */
     public function getCell1()
     {
@@ -172,11 +172,11 @@ class GridX3CellsWidget extends LayoutWidget
     /**
      * Set cell2
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell2
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell2
      *
      * @return GridX3CellsWidget
      */
-    public function setCell2(\MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell2 = null)
+    public function setCell2(\MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell2 = null)
     {
         $this->cell2 = $cell2;
 
@@ -186,7 +186,7 @@ class GridX3CellsWidget extends LayoutWidget
     /**
      * Get cell2
      *
-     * @return \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer
+     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer
      */
     public function getCell2()
     {
@@ -196,11 +196,11 @@ class GridX3CellsWidget extends LayoutWidget
     /**
      * Set cell3
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell3
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell3
      *
      * @return GridX3CellsWidget
      */
-    public function setCell3(\MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell3 = null)
+    public function setCell3(\MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell3 = null)
     {
         $this->cell3 = $cell3;
 
@@ -210,7 +210,7 @@ class GridX3CellsWidget extends LayoutWidget
     /**
      * Get cell3
      *
-     * @return \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer
+     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer
      */
     public function getCell3()
     {
@@ -226,11 +226,11 @@ class GridX3CellsWidget extends LayoutWidget
     /**
      * Set container
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container
      *
      * @return GridX3CellsWidget
      */
-    public function setContainer(\MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container = null)
+    public function setContainer(\MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container = null)
     {
         $this->container = $container;
 
@@ -240,7 +240,7 @@ class GridX3CellsWidget extends LayoutWidget
     /**
      * Get container
      *
-     * @return \MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer
+     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer
      */
     public function getContainer()
     {

@@ -1,8 +1,8 @@
 <?php
 
-namespace MoncaretWS\ContentWidgetsBundle\Twig\Extension;
+namespace MoncareyWS\ContentWidgetsBundle\Twig\Extension;
 
-use MoncaretWS\ContentWidgetsBundle\Twig\Helper\WidgetRenderer;
+use MoncareyWS\ContentWidgetsBundle\Twig\Helper\WidgetRenderer;
 
 class WidgetExtension extends \Twig_Extension {
 

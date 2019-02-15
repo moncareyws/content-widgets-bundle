@@ -5,7 +5,7 @@
  * 16/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Entity\Widget;
+namespace MoncareyWS\ContentWidgetsBundle\Entity\Widget;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * LayoutWidget
  *
- * @ORM\Entity(repositoryClass="MoncaretWS\ContentWidgetsBundle\Repository\WidgetRepository")
+ * @ORM\Entity(repositoryClass="MoncareyWS\ContentWidgetsBundle\Repository\WidgetRepository")
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="type", type="string")
  */
@@ -119,11 +119,11 @@ abstract class LayoutWidget extends Widget {
     /**
      * Set container
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container
      *
      * @return LayoutWidget
      */
-    public function setContainer(\MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container = null)
+    public function setContainer(\MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container = null)
     {
         $this->container = $container;
 
@@ -133,7 +133,7 @@ abstract class LayoutWidget extends Widget {
     /**
      * Get container
      *
-     * @return \MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer
+     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer
      */
     public function getContainer()
     {

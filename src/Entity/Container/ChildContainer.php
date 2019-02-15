@@ -5,18 +5,18 @@
  * 16/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Entity\Container;
+namespace MoncareyWS\ContentWidgetsBundle\Entity\Container;
 
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\Widget;
 
 /**
  * ChildContainer
  *
- * @ORM\Entity(repositoryClass="MoncaretWS\ContentWidgetsBundle\Repository\WidgetContainerRepository")
+ * @ORM\Entity(repositoryClass="MoncareyWS\ContentWidgetsBundle\Repository\WidgetContainerRepository")
  */
 class ChildContainer extends WidgetContainer {
 
@@ -32,7 +32,7 @@ class ChildContainer extends WidgetContainer {
     /**
      * @var LayoutWidget
      *
-     * @ORM\ManyToOne(targetEntity="MoncaretWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget")
+     * @ORM\ManyToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget")
      * @ORM\JoinColumn(name="widget_id", referencedColumnName="id", onDelete="CASCADE")
      */
     protected $widget;
@@ -40,11 +40,11 @@ class ChildContainer extends WidgetContainer {
     /**
      * Set widget
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget $widget
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget $widget
      *
      * @return ChildContainer
      */
-    public function setWidget(\MoncaretWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget $widget = null)
+    public function setWidget(\MoncareyWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget $widget = null)
     {
         $this->widget = $widget;
 
@@ -54,7 +54,7 @@ class ChildContainer extends WidgetContainer {
     /**
      * Get widget
      *
-     * @return \MoncaretWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget
+     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget
      */
     public function getWidget()
     {

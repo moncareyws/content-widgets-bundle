@@ -1,14 +1,14 @@
 <?php
 
-namespace MoncaretWS\ContentWidgetsBundle\Entity\Widget;
+namespace MoncareyWS\ContentWidgetsBundle\Entity\Widget;
 
 use Doctrine\ORM\Mapping as ORM;
-use MoncaretWS\ContentWidgetsBundle\Form\Type\HtmlWidgetType;
+use MoncareyWS\ContentWidgetsBundle\Form\Type\HtmlWidgetType;
 
 /**
  * Foundation4ColumnsWidget
  *
- * @ORM\Entity(repositoryClass="MoncaretWS\ContentWidgetsBundle\Repository\WidgetRepository")
+ * @ORM\Entity(repositoryClass="MoncareyWS\ContentWidgetsBundle\Repository\WidgetRepository")
  */
 class HtmlWidget extends ContentWidget
 {
@@ -61,7 +61,7 @@ class HtmlWidget extends ContentWidget
     /**
      * Get container
      *
-     * @return \MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer
+     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer
      */
     public function getContainer()
     {

@@ -5,17 +5,17 @@
  * 16/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Manager;
+namespace MoncareyWS\ContentWidgetsBundle\Manager;
 
 use Doctrine\Bundle\DoctrineBundle\Registry;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping\ClassMetadata;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\MasterContainer;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\ContainerVersion;
-use MoncaretWS\ContentWidgetsBundle\Repository\ContainerVersionRepository;
-use MoncaretWS\ContentWidgetsBundle\Repository\WidgetContainerRepository;
-use MoncaretWS\ContentWidgetsBundle\Factory\WidgetContainerFactory;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\MasterContainer;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\ContainerVersion;
+use MoncareyWS\ContentWidgetsBundle\Repository\ContainerVersionRepository;
+use MoncareyWS\ContentWidgetsBundle\Repository\WidgetContainerRepository;
+use MoncareyWS\ContentWidgetsBundle\Factory\WidgetContainerFactory;
 
 
 class WidgetContainerManager {

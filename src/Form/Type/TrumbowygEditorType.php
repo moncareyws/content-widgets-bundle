@@ -5,7 +5,7 @@
  * 29/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Form\Type;
+namespace MoncareyWS\ContentWidgetsBundle\Form\Type;
 
 
 use Exercise\HTMLPurifierBundle\Form\HTMLPurifierTransformer;

@@ -5,17 +5,17 @@
  * 16/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Entity\Container;
+namespace MoncareyWS\ContentWidgetsBundle\Entity\Container;
 
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\Widget;
 
 /**
  * MasterContainer
  *
- * @ORM\Entity(repositoryClass="MoncaretWS\ContentWidgetsBundle\Repository\WidgetContainerRepository")
+ * @ORM\Entity(repositoryClass="MoncareyWS\ContentWidgetsBundle\Repository\WidgetContainerRepository")
  */
 class MasterContainer extends WidgetContainer {
 
@@ -38,7 +38,7 @@ class MasterContainer extends WidgetContainer {
     /**
      * @var ContainerVersion[]|ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="MoncaretWS\ContentWidgetsBundle\Entity\Container\ContainerVersion", mappedBy="container")
+     * @ORM\OneToMany(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ContainerVersion", mappedBy="container")
      * @ORM\OrderBy({"versionIndex" = "DESC"})
      */
     protected $vesions;
@@ -89,7 +89,7 @@ class MasterContainer extends WidgetContainer {
     /**
      * Add vesion
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\ContainerVersion $vesion
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\ContainerVersion $vesion
      *
      * @return MasterContainer
      */
@@ -103,7 +103,7 @@ class MasterContainer extends WidgetContainer {
     /**
      * Remove vesion
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\ContainerVersion $vesion
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\ContainerVersion $vesion
      */
     public function removeVesion(ContainerVersion $vesion)
     {

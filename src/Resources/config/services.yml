@@ -1,16 +1,16 @@
 services:
 #    samuelmc_fdn_content_widgets.example:
-#        class: MoncaretWS\ContentWidgetsBundle\Example
+#        class: MoncareyWS\ContentWidgetsBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]
     # default configuration for services in *this* file
 
     widget_container_factory:
-        class: MoncaretWS\ContentWidgetsBundle\Factory\WidgetContainerFactory
+        class: MoncareyWS\ContentWidgetsBundle\Factory\WidgetContainerFactory
         arguments:
             $doctrine: '@doctrine'
 
     widget_factory:
-        class: MoncaretWS\ContentWidgetsBundle\Factory\WidgetFactory
+        class: MoncareyWS\ContentWidgetsBundle\Factory\WidgetFactory
         arguments:
             $doctrine: '@doctrine'
             $manager: '@widget_manager'
@@ -19,30 +19,30 @@ services:
             $router: '@router'
 
     widget_container_manager:
-        class: MoncaretWS\ContentWidgetsBundle\Manager\WidgetContainerManager
+        class: MoncareyWS\ContentWidgetsBundle\Manager\WidgetContainerManager
         arguments:
             $registry: '@doctrine'
             $containerFactory: '@widget_container_factory'
 
     widget_manager:
-        class: MoncaretWS\ContentWidgetsBundle\Manager\WidgetManager
+        class: MoncareyWS\ContentWidgetsBundle\Manager\WidgetManager
         arguments:
             $registry: '@doctrine'
 
     widget_renderer:
-        class: MoncaretWS\ContentWidgetsBundle\Twig\Helper\WidgetRenderer
+        class: MoncareyWS\ContentWidgetsBundle\Twig\Helper\WidgetRenderer
         arguments:
             $widgetManager: '@widget_manager'
             $containerManager: '@widget_container_manager'
 
     twig.filter.widget_extention:
-        class: MoncaretWS\ContentWidgetsBundle\Twig\Extension\WidgetExtension
+        class: MoncareyWS\ContentWidgetsBundle\Twig\Extension\WidgetExtension
         arguments:
             $widgetRenderer: '@widget_renderer'
         tags:
             - { name: twig.extension }
 
     widget_doctrine_event_listnener:
-        class: MoncaretWS\ContentWidgetsBundle\EventListener\DoctrineEventSubscriber
+        class: MoncareyWS\ContentWidgetsBundle\EventListener\DoctrineEventSubscriber
         tags:
             - { name: doctrine.event_subscriber , connection: default }

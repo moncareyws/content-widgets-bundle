@@ -5,19 +5,19 @@
  * 14/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Twig\Helper;
+namespace MoncareyWS\ContentWidgetsBundle\Twig\Helper;
 
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\MasterContainer;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
-use MoncaretWS\ContentWidgetsBundle\Manager\WidgetContainerManager;
-use MoncaretWS\ContentWidgetsBundle\Manager\WidgetManager;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\MasterContainer;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\Widget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
+use MoncareyWS\ContentWidgetsBundle\Manager\WidgetContainerManager;
+use MoncareyWS\ContentWidgetsBundle\Manager\WidgetManager;
 
 
 /**
  * Class WidgetRenderer
- * @package MoncaretWS\ContentWidgetsBundle\Service
+ * @package MoncareyWS\ContentWidgetsBundle\Service
  */
 class WidgetRenderer {
 

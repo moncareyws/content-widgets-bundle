@@ -3,40 +3,40 @@ content_widgets_root:
 
 widget_types:
     path:     /widget/types
-    controller: MoncaretWS\ContentWidgetsBundle\Controller\ContentWidgetsController::getWidgetTypes
+    controller: MoncareyWS\ContentWidgetsBundle\Controller\ContentWidgetsController::getWidgetTypes
     methods:  GET
 
 create_widget:
     path:     /container/{name}/add-widget/{type}
-    controller: MoncaretWS\ContentWidgetsBundle\Controller\ContentWidgetsController::createWidget
+    controller: MoncareyWS\ContentWidgetsBundle\Controller\ContentWidgetsController::createWidget
     methods:  [GET, POST]
 
 edit_widget:
     path:     /widget/{id}/edit
-    controller: MoncaretWS\ContentWidgetsBundle\Controller\ContentWidgetsController::editWidget
+    controller: MoncareyWS\ContentWidgetsBundle\Controller\ContentWidgetsController::editWidget
     methods:  [GET, POST]
 
 toggle_widget:
     path:     /widget/{id}/toggle-hidden
-    controller: MoncaretWS\ContentWidgetsBundle\Controller\ContentWidgetsController::toggleWidget
+    controller: MoncareyWS\ContentWidgetsBundle\Controller\ContentWidgetsController::toggleWidget
     methods:  [GET, POST]
 
 delete_widget:
     path:     /widget/{id}/delete
-    controller: MoncaretWS\ContentWidgetsBundle\Controller\ContentWidgetsController::deleteWidget
+    controller: MoncareyWS\ContentWidgetsBundle\Controller\ContentWidgetsController::deleteWidget
     methods:  [GET, DELETE]
 
 move_widget:
     path:     /widget/{id}/move-to/{containerName}/position/{position}
-    controller: MoncaretWS\ContentWidgetsBundle\Controller\ContentWidgetsController::moveWidget
+    controller: MoncareyWS\ContentWidgetsBundle\Controller\ContentWidgetsController::moveWidget
     methods:  GET
 
 save_container:
     path:     /container/{name}/save
-    controller: MoncaretWS\ContentWidgetsBundle\Controller\ContentWidgetsController::saveContainer
+    controller: MoncareyWS\ContentWidgetsBundle\Controller\ContentWidgetsController::saveContainer
     methods:  [GET, POST]
 
 container_versions:
     path:     /container/{name}/versions
-    controller: MoncaretWS\ContentWidgetsBundle\Controller\ContentWidgetsController::getContainerVesions
+    controller: MoncareyWS\ContentWidgetsBundle\Controller\ContentWidgetsController::getContainerVesions
     methods:  [GET, POST]

@@ -1,17 +1,17 @@
 <?php
 
-namespace MoncaretWS\ContentWidgetsBundle\Controller;
+namespace MoncareyWS\ContentWidgetsBundle\Controller;
 
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\ContainerVersion;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\MasterContainer;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\ContentWidget;
-use MoncaretWS\ContentWidgetsBundle\HttpFoundation\WidgetPluginResponse;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\ContainerVersion;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\MasterContainer;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\ContentWidget;
+use MoncareyWS\ContentWidgetsBundle\HttpFoundation\WidgetPluginResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\Widget;
 
 
 /**
@@ -218,7 +218,7 @@ class ContentWidgetsController extends AbstractController {
         $response = new WidgetPluginResponse();
 
         $version = new ContainerVersion($container);
-        $form = $this->createForm('MoncaretWS\ContentWidgetsBundle\Form\Container\ContainerVersionType', $version, [
+        $form = $this->createForm('MoncareyWS\ContentWidgetsBundle\Form\Container\ContainerVersionType', $version, [
             'action' => $this->generateUrl('save_container', ['name' => $container->getName()])
         ]);
         $form->handleRequest($request);

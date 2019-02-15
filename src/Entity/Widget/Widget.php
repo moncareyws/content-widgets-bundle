@@ -1,15 +1,15 @@
 <?php
 
-namespace MoncaretWS\ContentWidgetsBundle\Entity\Widget;
+namespace MoncareyWS\ContentWidgetsBundle\Entity\Widget;
 
 
 use Doctrine\ORM\Mapping as ORM;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
 
 /**
  * Widget
  *
- * @ORM\Entity(repositoryClass="MoncaretWS\ContentWidgetsBundle\Repository\WidgetRepository")
+ * @ORM\Entity(repositoryClass="MoncareyWS\ContentWidgetsBundle\Repository\WidgetRepository")
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="type", type="string")
  */
@@ -27,7 +27,7 @@ abstract class Widget implements \Serializable
     /**
      * @var WidgetContainer
      *
-     * @ORM\ManyToOne(targetEntity="MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer", inversedBy="widgets")
+     * @ORM\ManyToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer", inversedBy="widgets")
      * @ORM\JoinColumn(name="container_id", referencedColumnName="id", onDelete="CASCADE")
      */
     protected $container;
@@ -138,11 +138,11 @@ abstract class Widget implements \Serializable
     /**
      * Set container
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container
      *
      * @return Widget
      */
-    public function setContainer(\MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container = null)
+    public function setContainer(\MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container = null)
     {
         $this->container = $container;
 
@@ -152,7 +152,7 @@ abstract class Widget implements \Serializable
     /**
      * Get container
      *
-     * @return \MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer
+     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer
      */
     public function getContainer()
     {

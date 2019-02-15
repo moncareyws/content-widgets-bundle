@@ -5,7 +5,7 @@
  * 16/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Entity\Widget;
+namespace MoncareyWS\ContentWidgetsBundle\Entity\Widget;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * ContentWidget
  *
- * @ORM\Entity(repositoryClass="MoncaretWS\ContentWidgetsBundle\Repository\WidgetRepository")
+ * @ORM\Entity(repositoryClass="MoncareyWS\ContentWidgetsBundle\Repository\WidgetRepository")
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="type", type="string")
  */

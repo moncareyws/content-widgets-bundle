@@ -5,18 +5,18 @@
  * 15/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Factory;
+namespace MoncareyWS\ContentWidgetsBundle\Factory;
 
 use Doctrine\Bundle\DoctrineBundle\Registry as Doctrine;
 use Doctrine\Common\Util\Inflector;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityNotFoundException;
 use Doctrine\ORM\Mapping\ClassMetadata;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\ContentWidget;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\ContentWidget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\Widget;
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\Form\FormFactory;

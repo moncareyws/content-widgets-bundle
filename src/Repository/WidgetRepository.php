@@ -1,6 +1,6 @@
 <?php
 
-namespace MoncaretWS\ContentWidgetsBundle\Repository;
+namespace MoncareyWS\ContentWidgetsBundle\Repository;
 
 /**
  * WidgetRepository

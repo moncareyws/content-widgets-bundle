@@ -1,15 +1,15 @@
 <?php
 
-namespace MoncaretWS\ContentWidgetsBundle\Entity\Container;
+namespace MoncareyWS\ContentWidgetsBundle\Entity\Container;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\Widget;
 
 /**
  * WidgetContainer
  *
- * @ORM\Entity(repositoryClass="MoncaretWS\ContentWidgetsBundle\Repository\WidgetContainerRepository")
+ * @ORM\Entity(repositoryClass="MoncareyWS\ContentWidgetsBundle\Repository\WidgetContainerRepository")
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="type", type="string")
  */
@@ -41,7 +41,7 @@ abstract class WidgetContainer implements \Serializable {
     /**
      * @var Widget[]
      *
-     * @ORM\OneToMany(targetEntity="MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget", mappedBy="container", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Widget\Widget", mappedBy="container", orphanRemoval=true)
      * @ORM\OrderBy({"position" = "ASC"})
      */
     protected $widgets;
@@ -125,11 +125,11 @@ abstract class WidgetContainer implements \Serializable {
     /**
      * Add widget
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget $widget
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Widget\Widget $widget
      *
      * @return WidgetContainer
      */
-    public function addWidget(\MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget $widget)
+    public function addWidget(\MoncareyWS\ContentWidgetsBundle\Entity\Widget\Widget $widget)
     {
         $this->widgets[] = $widget;
 
@@ -139,9 +139,9 @@ abstract class WidgetContainer implements \Serializable {
     /**
      * Remove widget
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget $widget
+     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Widget\Widget $widget
      */
-    public function removeWidget(\MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget $widget)
+    public function removeWidget(\MoncareyWS\ContentWidgetsBundle\Entity\Widget\Widget $widget)
     {
         $this->widgets->removeElement($widget);
     }

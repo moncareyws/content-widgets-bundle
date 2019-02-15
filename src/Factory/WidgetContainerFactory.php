@@ -5,16 +5,16 @@
  * 15/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Factory;
+namespace MoncareyWS\ContentWidgetsBundle\Factory;
 
 use Doctrine\Bundle\DoctrineBundle\Registry as Doctrine;
 use Doctrine\Common\Util\Inflector;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping\ClassMetadata;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\MasterContainer;
-use MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\MasterContainer;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget;
 
 class WidgetContainerFactory {
 

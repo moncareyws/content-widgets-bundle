@@ -5,20 +5,20 @@
  * 16/06/2017
  */
 
-namespace MoncaretWS\ContentWidgetsBundle\Manager;
+namespace MoncareyWS\ContentWidgetsBundle\Manager;
 
 use Doctrine\Bundle\DoctrineBundle\Registry;
 use Doctrine\Common\Util\Inflector;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping\ClassMetadata;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\ContentWidget;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget;
-use MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\ContentWidget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget;
+use MoncareyWS\ContentWidgetsBundle\Entity\Widget\Widget;
 
 
 /**
  * Class WidgetManager
- * @package MoncaretWS\ContentWidgetsBundle\Service
+ * @package MoncareyWS\ContentWidgetsBundle\Service
  */
 class WidgetManager {
 

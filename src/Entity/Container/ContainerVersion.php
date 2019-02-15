@@ -1,6 +1,6 @@
 <?php
 
-namespace MoncaretWS\ContentWidgetsBundle\Entity\Container;
+namespace MoncareyWS\ContentWidgetsBundle\Entity\Container;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * ContainerVersion
  *
  * @ORM\Table(name="container_version")
- * @ORM\Entity(repositoryClass="MoncaretWS\ContentWidgetsBundle\Repository\ContainerVersionRepository")
+ * @ORM\Entity(repositoryClass="MoncareyWS\ContentWidgetsBundle\Repository\ContainerVersionRepository")
  */
 class ContainerVersion
 {
@@ -24,7 +24,7 @@ class ContainerVersion
     /**
      * @var MasterContainer
      *
-     * @ORM\ManyToOne(targetEntity="MoncaretWS\ContentWidgetsBundle\Entity\Container\MasterContainer", inversedBy="vesions")
+     * @ORM\ManyToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\MasterContainer", inversedBy="vesions")
      * @ORM\JoinColumn(name="container_id", referencedColumnName="id")
      */
     private $container;
