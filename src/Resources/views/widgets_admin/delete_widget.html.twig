@@ -1,0 +1,23 @@
+<div class="grid-container fluid">
+    <div class="grid-x grid-margin-x">
+        <div class="cell">
+            <div class="callout alert">
+                <p><strong>You are about to delete a widget.</strong> Are you sure you wish to delete this widget?</p>
+            </div>
+        </div>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+        <div class="cell">
+            <button type="submit" class="button success">
+                <i class="fa fa-save"></i>
+                Delete
+            </button>
+            <a class="button secondary" data-close>
+                <i class="fa fa-times"></i>
+                Cancel
+            </a>
+        </div>
+        {{ form_end(form) }}
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="widget-types">
+    <h2>Widget Types</h2>
+    {% for category in types %}
+        <h3>{{ category.title }}</h3>
+        <div class="grid-container full">
+            <div class="grid-x grid-padding-x small-up-2 medium-up-4 large-up-6">
+                {% for type in category.types %}
+                    <div class="cell">
+                        <a data-select-type="{{ type.name }}">
+                            <div class="widget-type-icon"></div>
+                            <h4>{{ type.title }}</h4>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+    <a class="close-button" data-close>&times;</a>
+</div>

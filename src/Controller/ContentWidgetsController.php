@@ -7,6 +7,7 @@ use MoncaretWS\ContentWidgetsBundle\Entity\Container\MasterContainer;
 use MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer;
 use MoncaretWS\ContentWidgetsBundle\Entity\Widget\ContentWidget;
 use MoncaretWS\ContentWidgetsBundle\HttpFoundation\WidgetPluginResponse;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -16,7 +17,7 @@ use MoncaretWS\ContentWidgetsBundle\Entity\Widget\Widget;
 /**
  * Content widgets controller.
  */
-class ContentWidgetsController extends Controller {
+class ContentWidgetsController extends AbstractController {
 
     /**
      * Lists all Widget types.
@@ -29,7 +30,7 @@ class ContentWidgetsController extends Controller {
 
         return $response
                 ->setAction('open-reveal')
-                ->setHtml($this->renderView('@SamuelmcFdnContentWidgets/WidgetsAdmin/widget_types.html.twig', ['types' => $types]));
+                ->setHtml($this->renderView('@content_widgets/widgets_admin/widget_types.html.twig', ['types' => $types]));
     }
 
     /**
@@ -55,7 +56,7 @@ class ContentWidgetsController extends Controller {
 
         if ($widgetCreation['status'] === 'form_required') {
             /** @var Form $widgetCreation['form'] */
-            $html = $this->renderView('@SamuelmcFdnContentWidgets/WidgetsAdmin/create_widget.html.twig', [
+            $html = $this->renderView('@content_widgets/widgets_admin/create_widget.html.twig', [
                 'widget' => $widgetCreation['widget'],
                 'form'   => $widgetCreation['form']->createView(),
             ]);
@@ -98,7 +99,7 @@ class ContentWidgetsController extends Controller {
 
         return $response
             ->setAction('open-reveal')
-            ->setHtml($this->renderView('@SamuelmcFdnContentWidgets/WidgetsAdmin/edit_widget.html.twig', [
+            ->setHtml($this->renderView('@content_widgets/widgets_admin/edit_widget.html.twig', [
                 'widget' => $widget,
                 'form'   => $form->createView(),
             ]));
@@ -158,7 +159,7 @@ class ContentWidgetsController extends Controller {
 
         return $response
             ->setAction('open-reveal')
-            ->setHtml($this->renderView('@SamuelmcFdnContentWidgets/WidgetsAdmin/delete_widget.html.twig', [
+            ->setHtml($this->renderView('@content_widgets/widgets_admin/delete_widget.html.twig', [
                 'widget' => $widget,
                 'form'   => $form->createView(),
             ]));
@@ -234,7 +235,7 @@ class ContentWidgetsController extends Controller {
 
         return $response
             ->setAction('open-reveal')
-            ->setHtml($this->renderView('@SamuelmcFdnContentWidgets/WidgetsAdmin/save_container.html.twig', [
+            ->setHtml($this->renderView('@content_widgets/widgets_admin/save_container.html.twig', [
                 'version' => $version,
                 'form'   => $form->createView(),
             ]));
@@ -247,7 +248,7 @@ class ContentWidgetsController extends Controller {
 
         return $response
             ->setAction('open-reveal')
-            ->setHtml($this->renderView('@SamuelmcFdnContentWidgets/WidgetsAdmin/container_versions.html.twig', [
+            ->setHtml($this->renderView('@content_widgets/widgets_admin/container_versions.html.twig', [
                 'versions' => $this->get('widget_container_manager')->getContainerVersions($container)
             ]));
     }

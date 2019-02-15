@@ -3,7 +3,7 @@
 namespace MoncaretWS\ContentWidgetsBundle\Entity\Widget;
 
 use Doctrine\ORM\Mapping as ORM;
-use MoncaretWS\ContentWidgetsBundle\Form\Widget\HtmlWidgetType;
+use MoncaretWS\ContentWidgetsBundle\Form\Type\HtmlWidgetType;
 
 /**
  * Foundation4ColumnsWidget

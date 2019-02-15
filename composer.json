@@ -15,7 +15,8 @@
         "symfony/form": "^4.2",
         "symfony/orm-pack": "^1.0",
         "symfony/validator": "^4.2",
-        "symfony/yaml": "^4.2"
+        "symfony/yaml": "^4.2",
+        "exercise/htmlpurifier-bundle": "1.0.0"
     },
     "autoload" : {
         "psr-4" : {

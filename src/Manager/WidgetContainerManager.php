@@ -7,7 +7,6 @@
 
 namespace MoncaretWS\ContentWidgetsBundle\Manager;
 
-
 use Doctrine\Bundle\DoctrineBundle\Registry;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping\ClassMetadata;

@@ -1,6 +1,7 @@
 <?php
 
 namespace MoncaretWS\ContentWidgetsBundle\Repository;
+
 use MoncaretWS\ContentWidgetsBundle\Entity\Container\ContainerVersion;
 use MoncaretWS\ContentWidgetsBundle\Entity\Container\MasterContainer;
 

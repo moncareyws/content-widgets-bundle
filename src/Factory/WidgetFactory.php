@@ -7,7 +7,6 @@
 
 namespace MoncaretWS\ContentWidgetsBundle\Factory;
 
-
 use Doctrine\Bundle\DoctrineBundle\Registry as Doctrine;
 use Doctrine\Common\Util\Inflector;
 use Doctrine\ORM\EntityManager;

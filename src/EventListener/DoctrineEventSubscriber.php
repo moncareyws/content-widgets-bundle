@@ -8,11 +8,11 @@
 
 namespace MoncaretWS\ContentWidgetsBundle\EventListener;
 
-
 use Doctrine\Common\EventSubscriber;
 use Doctrine\Common\Persistence\Event\LoadClassMetadataEventArgs;
 use Doctrine\ORM\Events;
 use Doctrine\ORM\Mapping\ClassMetadata;
+
 
 class DoctrineEventSubscriber implements EventSubscriber
 {

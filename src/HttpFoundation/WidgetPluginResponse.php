@@ -7,9 +7,7 @@
 
 namespace MoncaretWS\ContentWidgetsBundle\HttpFoundation;
 
-
 use Symfony\Component\HttpFoundation\JsonResponse;
-
 
 /**
  * Class WidgetPluginResponse
