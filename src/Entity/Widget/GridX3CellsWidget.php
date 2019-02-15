@@ -6,16 +6,16 @@ use Doctrine\ORM\Mapping as ORM;
 use MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer;
 
 /**
- * Foundation3ColumnsWidget
+ * Foundation3CellsWidget
  *
  * @ORM\Entity(repositoryClass="MoncaretWS\ContentWidgetsBundle\Repository\WidgetRepository")
  */
-class Foundation3ColumnsWidget extends LayoutWidget
+class GridX3CellsWidget extends LayoutWidget
 {
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Cell(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -25,37 +25,37 @@ class Foundation3ColumnsWidget extends LayoutWidget
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinColumn(name="column1_container_id", referencedColumnName="id")
+     * @ORM\JoinCell(name="cell1_container_id", referencedCellName="id")
      */
-    protected $column1;
+    protected $cell1;
 
     /**
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinColumn(name="column2_container_id", referencedColumnName="id")
+     * @ORM\JoinCell(name="cell2_container_id", referencedCellName="id")
      */
-    protected $column2;
+    protected $cell2;
 
     /**
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinColumn(name="column3_container_id", referencedColumnName="id")
+     * @ORM\JoinCell(name="cell3_container_id", referencedCellName="id")
      */
-    private $column3;
+    private $cell3;
 
 
     public function __construct() {
-        $this->template = '@SamuelmcFdnContentWidgetsBundle/widget_templates/foundation_3_columns.widget.html.twig';
+        $this->template = '@content_widgets/widget_templates/grid_x_3_cells.widget.html.twig';
     }
 
     public function getChildContainers()
     {
         return [
-            'column1' => $this->getColumn1(),
-            'column2' => $this->getColumn2(),
-            'column3' => $this->getColumn3()
+            'cell1' => $this->getCell1(),
+            'cell2' => $this->getCell2(),
+            'cell3' => $this->getCell3()
         ];
     }
 
@@ -78,7 +78,7 @@ class Foundation3ColumnsWidget extends LayoutWidget
      *
      * @param string $template
      *
-     * @return Foundation3ColumnsWidget
+     * @return GridX3CellsWidget
      */
     public function setTemplate($template)
     {
@@ -102,7 +102,7 @@ class Foundation3ColumnsWidget extends LayoutWidget
      *
      * @param integer $position
      *
-     * @return Foundation3ColumnsWidget
+     * @return GridX3CellsWidget
      */
     public function setPosition($position)
     {
@@ -126,7 +126,7 @@ class Foundation3ColumnsWidget extends LayoutWidget
      *
      * @param boolean $hidden
      *
-     * @return Foundation3ColumnsWidget
+     * @return GridX3CellsWidget
      */
     public function setHidden($hidden)
     {
@@ -146,75 +146,81 @@ class Foundation3ColumnsWidget extends LayoutWidget
     }
 
     /**
-     * Set column1
+     * Set cell1
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $column1
+     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell1
      *
-     * @return Foundation3ColumnsWidget
+     * @return GridX3CellsWidget
      */
-    public function setColumn1(\MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $column1 = null)
+    public function setCell1(\MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell1 = null)
     {
-        $this->column1 = $column1;
+        $this->cell1 = $cell1;
 
         return $this;
     }
 
     /**
-     * Get column1
+     * Get cell1
      *
      * @return \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer
      */
-    public function getColumn1()
+    public function getCell1()
     {
-        return $this->column1;
+        return $this->cell1;
     }
 
     /**
-     * Set column2
+     * Set cell2
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $column2
+     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell2
      *
-     * @return Foundation3ColumnsWidget
+     * @return GridX3CellsWidget
      */
-    public function setColumn2(\MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $column2 = null)
+    public function setCell2(\MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell2 = null)
     {
-        $this->column2 = $column2;
+        $this->cell2 = $cell2;
 
         return $this;
     }
 
     /**
-     * Get column2
+     * Get cell2
      *
      * @return \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer
      */
-    public function getColumn2()
+    public function getCell2()
     {
-        return $this->column2;
+        return $this->cell2;
     }
 
     /**
-     * Set column3
+     * Set cell3
      *
-     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $column3
+     * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell3
      *
-     * @return Foundation3ColumnsWidget
+     * @return GridX3CellsWidget
      */
-    public function setColumn3(\MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $column3 = null)
+    public function setCell3(\MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell3 = null)
     {
-        $this->column3 = $column3;
+        $this->cell3 = $cell3;
 
         return $this;
     }
 
     /**
-     * Get column3
+     * Get cell3
      *
      * @return \MoncaretWS\ContentWidgetsBundle\Entity\Container\ChildContainer
      */
-    public function getColumn3()
+    public function getCell3()
     {
-        return $this->column3;
+        return $this->cell3;
+    }
+
+    public function getCell(int $cell) {
+        if (in_array($cell, [1,2,3])) {
+            return $this->{"cell{$cell}"};
+        }
     }
 
     /**
@@ -222,7 +228,7 @@ class Foundation3ColumnsWidget extends LayoutWidget
      *
      * @param \MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container
      *
-     * @return Foundation3ColumnsWidget
+     * @return GridX3CellsWidget
      */
     public function setContainer(\MoncaretWS\ContentWidgetsBundle\Entity\Container\WidgetContainer $container = null)
     {
@@ -248,9 +254,9 @@ class Foundation3ColumnsWidget extends LayoutWidget
             'template' => $this->template,
             'position' => $this->position,
             'hidden' => $this->hidden,
-            'column1' => $this->column1->serialize(),
-            'column2' => $this->column2->serialize(),
-            'column3' => $this->column3->serialize()
+            'cell1' => $this->cell1->serialize(),
+            'cell2' => $this->cell2->serialize(),
+            'cell3' => $this->cell3->serialize()
         ];
 
         return serialize($serializable);
@@ -265,23 +271,23 @@ class Foundation3ColumnsWidget extends LayoutWidget
         $this->template = $versionData['template'];
         $this->position = $versionData['position'];
         $this->hidden = $versionData['hidden'];
-        $serializedColumn1 = $versionData['column1'];
-        $serializedColumn2 = $versionData['column2'];
-        $serializedColumn3 = $versionData['column3'];
+        $serializedCell1 = $versionData['cell1'];
+        $serializedCell2 = $versionData['cell2'];
+        $serializedCell3 = $versionData['cell3'];
 
-        $column1 = new ChildContainer();
-        $column1->unserialize($serializedColumn1);
-        $column1->setWidget($this);
-        $this->column1 = $column1;
+        $cell1 = new ChildContainer();
+        $cell1->unserialize($serializedCell1);
+        $cell1->setWidget($this);
+        $this->cell1 = $cell1;
 
-        $column2 = new ChildContainer();
-        $column2->unserialize($serializedColumn2);
-        $column2->setWidget($this);
-        $this->column2 = $column2;
+        $cell2 = new ChildContainer();
+        $cell2->unserialize($serializedCell2);
+        $cell2->setWidget($this);
+        $this->cell2 = $cell2;
 
-        $column3 = new ChildContainer();
-        $column3->unserialize($serializedColumn3);
-        $column3->setWidget($this);
-        $this->column3 = $column3;
+        $cell3 = new ChildContainer();
+        $cell3->unserialize($serializedCell3);
+        $cell3->setWidget($this);
+        $this->cell3 = $cell3;
     }
 }

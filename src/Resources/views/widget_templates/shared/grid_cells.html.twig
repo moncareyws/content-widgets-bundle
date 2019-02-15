@@ -1,0 +1,5 @@
+{% for cell_number in 1..cell_count %}
+    <div class="cell">
+        {{ widget_container(widget.cell(cell_number)) }}
+    </div>
+{% endfor %}

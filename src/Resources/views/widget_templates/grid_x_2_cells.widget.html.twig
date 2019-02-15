@@ -1,0 +1,12 @@
+{% extends '@content_widgets/widget_templates/base/widget.html.twig' %}
+
+{% set grid_config = {
+    'cell_count': 2,
+    'block_grid_classes': [
+        'medium-up-2'
+    ]
+} %}
+
+{% block widget %}
+    {% include '@content_widgets/widget_templates/shared/block_grid.html.twig' with grid_config %}
+{% endblock %}
