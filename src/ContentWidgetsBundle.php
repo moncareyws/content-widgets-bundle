@@ -1,6 +1,6 @@
 <?php
 
-namespace MoncaretWS\ContentWidgetsBundle;
+namespace MoncareyWS\ContentWidgetsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
