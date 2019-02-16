@@ -15,7 +15,7 @@ class GridX6CellsWidget extends LayoutWidget
     /**
      * @var int
      *
-     * @ORM\Cell(name="id", type="integer")
+     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -25,7 +25,7 @@ class GridX6CellsWidget extends LayoutWidget
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinCell(name="cell1_container_id", referencedCellName="id")
+     * @ORM\JoinColumn(name="cell1_container_id", referencedColumnName="id")
      */
     protected $cell1;
 
@@ -33,7 +33,7 @@ class GridX6CellsWidget extends LayoutWidget
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinCell(name="cell2_container_id", referencedCellName="id")
+     * @ORM\JoinColumn(name="cell2_container_id", referencedColumnName="id")
      */
     protected $cell2;
 
@@ -41,7 +41,7 @@ class GridX6CellsWidget extends LayoutWidget
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinCell(name="cell3_container_id", referencedCellName="id")
+     * @ORM\JoinColumn(name="cell3_container_id", referencedColumnName="id")
      */
     private $cell3;
 
@@ -49,7 +49,7 @@ class GridX6CellsWidget extends LayoutWidget
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinCell(name="cell4_container_id", referencedCellName="id")
+     * @ORM\JoinColumn(name="cell4_container_id", referencedColumnName="id")
      */
     private $cell4;
 
@@ -57,7 +57,7 @@ class GridX6CellsWidget extends LayoutWidget
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinCell(name="cell5_container_id", referencedCellName="id")
+     * @ORM\JoinColumn(name="cell5_container_id", referencedColumnName="id")
      */
     private $cell5;
 
@@ -65,7 +65,7 @@ class GridX6CellsWidget extends LayoutWidget
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinCell(name="cell6_container_id", referencedCellName="id")
+     * @ORM\JoinColumn(name="cell6_container_id", referencedColumnName="id")
      */
     private $cell6;
 
