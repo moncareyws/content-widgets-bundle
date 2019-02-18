@@ -25,7 +25,7 @@ class GridX6CellsWidget extends LayoutWidget
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinColumn(name="cell1_container_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="cell1_container_id", referencedColumnName="id", onDelete="CASCADE")
      */
     protected $cell1;
 
@@ -33,7 +33,7 @@ class GridX6CellsWidget extends LayoutWidget
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinColumn(name="cell2_container_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="cell2_container_id", referencedColumnName="id", onDelete="CASCADE")
      */
     protected $cell2;
 
@@ -41,7 +41,7 @@ class GridX6CellsWidget extends LayoutWidget
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinColumn(name="cell3_container_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="cell3_container_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $cell3;
 
@@ -49,7 +49,7 @@ class GridX6CellsWidget extends LayoutWidget
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinColumn(name="cell4_container_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="cell4_container_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $cell4;
 
@@ -57,7 +57,7 @@ class GridX6CellsWidget extends LayoutWidget
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinColumn(name="cell5_container_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="cell5_container_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $cell5;
 
@@ -65,7 +65,7 @@ class GridX6CellsWidget extends LayoutWidget
      * @var ChildContainer
      *
      * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
-     * @ORM\JoinColumn(name="cell6_container_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="cell6_container_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $cell6;
 

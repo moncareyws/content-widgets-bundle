@@ -11,6 +11,7 @@ use Doctrine\Bundle\DoctrineBundle\Registry;
 use Doctrine\Common\Util\Inflector;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping\ClassMetadata;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer;
 use MoncareyWS\ContentWidgetsBundle\Entity\Widget\ContentWidget;
 use MoncareyWS\ContentWidgetsBundle\Entity\Widget\LayoutWidget;
 use MoncareyWS\ContentWidgetsBundle\Entity\Widget\Widget;
@@ -138,6 +139,28 @@ class WidgetManager {
      */
     public function isContentType($type) {
         return (bool) ($this->getWidgetTypeClass($this->getTypeParent($type)) == ContentWidget::class);
+    }
+
+    public function deleteWidget(Widget $widget)
+    {
+        if ($widget instanceof LayoutWidget) {
+            /** @var ChildContainer[] $children */
+            $children = $widget->getChildren();
+
+            foreach ($children as $child) {
+                $widgets = $child->getWidgets();
+
+                foreach ($widgets as $subWidget) {
+                    $this->deleteWidget($subWidget);
+                }
+
+                $this->em->remove($child);
+                $this->em->flush();
+            }
+        }
+
+        $this->em->remove($widget);
+        $this->em->flush();
     }
 
     /**

@@ -12,7 +12,7 @@
 
     class WidgetEditor {
 
-        constructor(element, option) {
+        constructor(element, options) {
 
             this.$element = element;
             this.options = $.extend({}, WidgetEditor.defaults, element.data(), options);
@@ -61,16 +61,19 @@
 
         _deleteWidget(e) {
             e.preventDefault();
+            console.log('_deleteWidget');
             this._ajaxGet('/widget/' + this.widgetId + '/delete');
         }
 
         _editWidget(e) {
             e.preventDefault();
+            console.log('_editWidget');
             this._ajaxGet('/widget/' + this.widgetId + '/edit');
         }
 
         _toggleHidden(e) {
             e.preventDefault();
+            console.log('_toggleHidden');
             this._ajaxGet('/widget/' + this.widgetId + '/toggle-hidden');
         }
 

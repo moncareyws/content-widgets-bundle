@@ -1,0 +1,29 @@
+<div id="{{ container.name }}-widgetcontainer" class="widgetcontainer {{ container.name }}-widgetcontainer editable"
+     data-widget-container-editor
+     data-container-id="{{ container.id }}"
+     data-container-name="{{ container.name }}"
+     data-container-type="{{ config.type }}"
+     {% if config.type == 'mastercontainer' %}data-is-standalone="{{ container.isStandAlone }}"{% endif %}
+     data-root-path="{{ path('content_widgets_root')|trim('/', 'right') }}">
+
+    <div data-container-toolbar>
+        <div class="float-left">
+            <h6 class="container-label">
+                {% if config.type == 'mastercontainer' and container.isStandAlone %}Container: {% endif %}
+                <strong>{{ container.label }}</strong>
+            </h6>
+        </div>
+        <div class="float-right">
+            <div class="button-group small align-right">
+                {% if config.type == 'mastercontainer' %}
+                    {% if container.isStandAlone %}
+                        <a class="button success top" data-save-container><i class="fa fa-save"></i> Save</a>
+                        <a class="button hollow top hide-for-preview" data-container-versions><i class="fa fa-history"></i> History</a>
+                    {% endif %}
+                    <a class="button hollow top hide-for-preview" data-toggle-toolbars>Preview</a>
+                    <a class="button hollow top show-for-preview" data-toggle-toolbars><i class="fa fa-pencil"></i> Edit widgets</a>
+                {% endif %}
+                <a class="button hollow top hide-for-preview" data-new-widget><i class="fa fa-plus"></i> New widget</a>
+            </div>
+        </div>
+    </div>

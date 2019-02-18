@@ -21,10 +21,10 @@ class ContentWidgetsExtension extends Extension implements PrependExtensionInter
 
             $twigConfig['paths'][__DIR__.'/../Resources/views'] = 'content_widgets';
 
-//            if (!isset($twigConfig['form_themes']))
-//                $twigConfig['form_themes'] = [];
-//
-//            $twigConfig['form_themes'][] = '@foundation/form/fields.html.twig';
+            if (!isset($twigConfig['form_themes']))
+                $twigConfig['form_themes'] = [];
+
+            $twigConfig['form_themes'][] = '@content_widgets/form/fields.html.twig';
 
             if (!isset($twigConfig['globals']))
                 $twigConfig['globals'] = [];

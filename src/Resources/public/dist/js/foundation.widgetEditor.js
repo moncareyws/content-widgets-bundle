@@ -17,7 +17,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
     var WidgetEditor = function () {
-        function WidgetEditor(element, option) {
+        function WidgetEditor(element, options) {
             _classCallCheck(this, WidgetEditor);
 
             this.$element = element;
@@ -72,18 +72,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             key: '_deleteWidget',
             value: function _deleteWidget(e) {
                 e.preventDefault();
+                console.log('_deleteWidget');
                 this._ajaxGet('/widget/' + this.widgetId + '/delete');
             }
         }, {
             key: '_editWidget',
             value: function _editWidget(e) {
                 e.preventDefault();
+                console.log('_editWidget');
                 this._ajaxGet('/widget/' + this.widgetId + '/edit');
             }
         }, {
             key: '_toggleHidden',
             value: function _toggleHidden(e) {
                 e.preventDefault();
+                console.log('_toggleHidden');
                 this._ajaxGet('/widget/' + this.widgetId + '/toggle-hidden');
             }
         }, {
