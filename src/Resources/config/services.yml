@@ -1,8 +1,10 @@
 services:
-#    samuelmc_fdn_content_widgets.example:
-#        class: MoncareyWS\ContentWidgetsBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
-    # default configuration for services in *this* file
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
 
     widget_container_factory:
         class: MoncareyWS\ContentWidgetsBundle\Factory\WidgetContainerFactory
@@ -46,3 +48,15 @@ services:
         class: MoncareyWS\ContentWidgetsBundle\EventListener\DoctrineEventSubscriber
         tags:
             - { name: doctrine.event_subscriber , connection: default }
+
+    html_purifier:
+        class: Exercise\HTMLPurifierBundle\Form\HTMLPurifierTransformer
+        arguments:
+            $purifier: '@exercise_html_purifier.default'
+
+    trumbowyg_editor:
+        class: MoncareyWS\ContentWidgetsBundle\Form\Type\TrumbowygEditorType
+        arguments:
+            $htmlPurifier: '@html_purifier'
+        tags:
+            - {name: form.type, alias: trumbowyg_editor}

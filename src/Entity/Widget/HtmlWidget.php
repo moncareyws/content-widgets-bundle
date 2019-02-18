@@ -30,7 +30,7 @@ class HtmlWidget extends ContentWidget
 
 
     public function __construct() {
-        $this->template = '@SamuelmcFdnContentWidgetsBundle/widget_templates/html.widget.html.twig';
+        $this->template = '@content_widgets/widget_templates/html.widget.html.twig';
         $this->formTypeClass = HtmlWidgetType::class;
     }
 

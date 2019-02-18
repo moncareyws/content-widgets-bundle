@@ -71,7 +71,7 @@ class WidgetRenderer {
             'container' => $widgetContainer
         ];
 
-        return $twig->render('@SamuelmcFdnContentWidgets/widget_templates/widget_container.html.twig', $widgetContainerData);
+        return $twig->render('@content_widgets/widget_templates/base/widget_container.html.twig', $widgetContainerData);
     }
 
     /**

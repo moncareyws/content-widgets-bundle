@@ -3,7 +3,7 @@
 namespace MoncareyWS\ContentWidgetsBundle\Entity\Widget;
 
 use Doctrine\ORM\Mapping as ORM;
-use MoncareyWS;
+use MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer;
 
 /**
  * Foundation4CellsWidget
@@ -24,7 +24,7 @@ class GridX4CellsWidget extends LayoutWidget
     /**
      * @var ChildContainer
      *
-     * @ORM\OneToOne(targetEntity="MoncareyWS", orphanRemoval=true)
+     * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
      * @ORM\JoinColumn(name="cell1_container_id", referencedColumnName="id")
      */
     protected $cell1;
@@ -32,7 +32,7 @@ class GridX4CellsWidget extends LayoutWidget
     /**
      * @var ChildContainer
      *
-     * @ORM\OneToOne(targetEntity="MoncareyWS", orphanRemoval=true)
+     * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
      * @ORM\JoinColumn(name="cell2_container_id", referencedColumnName="id")
      */
     protected $cell2;
@@ -40,7 +40,7 @@ class GridX4CellsWidget extends LayoutWidget
     /**
      * @var ChildContainer
      *
-     * @ORM\OneToOne(targetEntity="MoncareyWS", orphanRemoval=true)
+     * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
      * @ORM\JoinColumn(name="cell3_container_id", referencedColumnName="id")
      */
     private $cell3;
@@ -48,7 +48,7 @@ class GridX4CellsWidget extends LayoutWidget
     /**
      * @var ChildContainer
      *
-     * @ORM\OneToOne(targetEntity="MoncareyWS", orphanRemoval=true)
+     * @ORM\OneToOne(targetEntity="MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer", orphanRemoval=true)
      * @ORM\JoinColumn(name="cell4_container_id", referencedColumnName="id")
      */
     private $cell4;
@@ -157,11 +157,11 @@ class GridX4CellsWidget extends LayoutWidget
     /**
      * Set cell1
      *
-     * @param \MoncareyWS $cell1
+     * @param ChildContainer $cell1
      *
      * @return GridX4CellsWidget
      */
-    public function setCell1(\MoncareyWS $cell1 = null)
+    public function setCell1(ChildContainer $cell1 = null)
     {
         $this->cell1 = $cell1;
 
@@ -171,7 +171,7 @@ class GridX4CellsWidget extends LayoutWidget
     /**
      * Get cell1
      *
-     * @return \MoncareyWS
+     * @return ChildContainer
      */
     public function getCell1()
     {
@@ -181,11 +181,11 @@ class GridX4CellsWidget extends LayoutWidget
     /**
      * Set cell2
      *
-     * @param \MoncareyWS $cell2
+     * @param ChildContainer $cell2
      *
      * @return GridX4CellsWidget
      */
-    public function setCell2(\MoncareyWS $cell2 = null)
+    public function setCell2(ChildContainer $cell2 = null)
     {
         $this->cell2 = $cell2;
 
@@ -195,7 +195,7 @@ class GridX4CellsWidget extends LayoutWidget
     /**
      * Get cell2
      *
-     * @return \MoncareyWS
+     * @return ChildContainer
      */
     public function getCell2()
     {
@@ -205,11 +205,11 @@ class GridX4CellsWidget extends LayoutWidget
     /**
      * Set cell3
      *
-     * @param \MoncareyWS $cell3
+     * @param ChildContainer $cell3
      *
      * @return GridX4CellsWidget
      */
-    public function setCell3(\MoncareyWS $cell3 = null)
+    public function setCell3(ChildContainer $cell3 = null)
     {
         $this->cell3 = $cell3;
 
@@ -219,7 +219,7 @@ class GridX4CellsWidget extends LayoutWidget
     /**
      * Get cell3
      *
-     * @return \MoncareyWS
+     * @return ChildContainer
      */
     public function getCell3()
     {
@@ -229,11 +229,11 @@ class GridX4CellsWidget extends LayoutWidget
     /**
      * Set cell4
      *
-     * @param \MoncareyWS $cell4
+     * @param ChildContainer $cell4
      *
      * @return GridX4CellsWidget
      */
-    public function setCell4(\MoncareyWS $cell4 = null)
+    public function setCell4(ChildContainer $cell4 = null)
     {
         $this->cell4 = $cell4;
 
@@ -243,7 +243,7 @@ class GridX4CellsWidget extends LayoutWidget
     /**
      * Get cell4
      *
-     * @return \MoncareyWS
+     * @return ChildContainer
      */
     public function getCell4()
     {

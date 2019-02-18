@@ -3,7 +3,7 @@
     {% for category in types %}
         <h3>{{ category.title }}</h3>
         <div class="grid-container full">
-            <div class="grid-x grid-padding-x small-up-2 medium-up-4 large-up-6">
+            <div class="grid-x grid-padding-x small-up-2 medium-up-4">
                 {% for type in category.types %}
                     <div class="cell">
                         <a data-select-type="{{ type.name }}">

@@ -175,11 +175,11 @@ class GridX6CellsWidget extends LayoutWidget
     /**
      * Set cell1
      *
-     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell1
+     * @param ChildContainer $cell1
      *
      * @return GridX6CellsWidget
      */
-    public function setCell1(\MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell1 = null)
+    public function setCell1(ChildContainer $cell1 = null)
     {
         $this->cell1 = $cell1;
 
@@ -189,7 +189,7 @@ class GridX6CellsWidget extends LayoutWidget
     /**
      * Get cell1
      *
-     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer
+     * @return ChildContainer
      */
     public function getCell1()
     {
@@ -199,11 +199,11 @@ class GridX6CellsWidget extends LayoutWidget
     /**
      * Set cell2
      *
-     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell2
+     * @param ChildContainer $cell2
      *
      * @return GridX6CellsWidget
      */
-    public function setCell2(\MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell2 = null)
+    public function setCell2(ChildContainer $cell2 = null)
     {
         $this->cell2 = $cell2;
 
@@ -213,7 +213,7 @@ class GridX6CellsWidget extends LayoutWidget
     /**
      * Get cell2
      *
-     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer
+     * @return ChildContainer
      */
     public function getCell2()
     {
@@ -223,11 +223,11 @@ class GridX6CellsWidget extends LayoutWidget
     /**
      * Set cell3
      *
-     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell3
+     * @param ChildContainer $cell3
      *
      * @return GridX6CellsWidget
      */
-    public function setCell3(\MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell3 = null)
+    public function setCell3(ChildContainer $cell3 = null)
     {
         $this->cell3 = $cell3;
 
@@ -237,7 +237,7 @@ class GridX6CellsWidget extends LayoutWidget
     /**
      * Get cell3
      *
-     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer
+     * @return ChildContainer
      */
     public function getCell3()
     {
@@ -247,11 +247,11 @@ class GridX6CellsWidget extends LayoutWidget
     /**
      * Set cell4
      *
-     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell4
+     * @param ChildContainer $cell4
      *
      * @return GridX6CellsWidget
      */
-    public function setCell4(\MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell4 = null)
+    public function setCell4(ChildContainer $cell4 = null)
     {
         $this->cell4 = $cell4;
 
@@ -261,7 +261,7 @@ class GridX6CellsWidget extends LayoutWidget
     /**
      * Get cell4
      *
-     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer
+     * @return ChildContainer
      */
     public function getCell4()
     {
@@ -271,11 +271,11 @@ class GridX6CellsWidget extends LayoutWidget
     /**
      * Set cell3
      *
-     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell3
+     * @param ChildContainer $cell3
      *
      * @return GridX6CellsWidget
      */
-    public function setCell5(\MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell5 = null)
+    public function setCell5(ChildContainer $cell5 = null)
     {
         $this->cell5 = $cell5;
 
@@ -285,7 +285,7 @@ class GridX6CellsWidget extends LayoutWidget
     /**
      * Get cell3
      *
-     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer
+     * @return ChildContainer
      */
     public function getCell5()
     {
@@ -295,11 +295,11 @@ class GridX6CellsWidget extends LayoutWidget
     /**
      * Set cell4
      *
-     * @param \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell4
+     * @param ChildContainer $cell4
      *
      * @return GridX6CellsWidget
      */
-    public function setCell6(\MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer $cell6 = null)
+    public function setCell6(ChildContainer $cell6 = null)
     {
         $this->cell6 = $cell6;
 
@@ -309,7 +309,7 @@ class GridX6CellsWidget extends LayoutWidget
     /**
      * Get cell4
      *
-     * @return \MoncareyWS\ContentWidgetsBundle\Entity\Container\ChildContainer
+     * @return ChildContainer
      */
     public function getCell6()
     {

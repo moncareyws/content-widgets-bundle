@@ -21,6 +21,7 @@ use Symfony\Bundle\FrameworkBundle\Routing\Router;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\Form\FormFactory;
 use Symfony\Component\HttpFoundation\Request;
+use MoncareyWS\ContentWidgetsBundle\Manager\WidgetManager;
 
 class WidgetFactory {
 

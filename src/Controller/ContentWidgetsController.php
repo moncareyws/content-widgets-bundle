@@ -218,7 +218,7 @@ class ContentWidgetsController extends AbstractController {
         $response = new WidgetPluginResponse();
 
         $version = new ContainerVersion($container);
-        $form = $this->createForm('MoncareyWS\ContentWidgetsBundle\Form\Container\ContainerVersionType', $version, [
+        $form = $this->createForm('MoncareyWS\ContentWidgetsBundle\Form\Type\ContainerVersionType', $version, [
             'action' => $this->generateUrl('save_container', ['name' => $container->getName()])
         ]);
         $form->handleRequest($request);
