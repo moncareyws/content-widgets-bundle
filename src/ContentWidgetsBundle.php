@@ -8,6 +8,10 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class ContentWidgetsBundle extends Bundle implements BundleHasNodeModules, BundleHasAssetsToBuild
 {
+
+    /**
+     * @return array
+     */
     public function getGulpSassPaths(): array
     {
         return [
@@ -15,4 +19,24 @@ class ContentWidgetsBundle extends Bundle implements BundleHasNodeModules, Bundl
             'node_modules/trumbowyg/dist/ui/sass'
         ];
     }
+
+    /**
+     * @return array
+     */
+    public function getSassImports(): array
+    {
+        return [
+            'trumbowyg',
+            'content-widgets'
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    public function getSassIncludes(): array
+    {
+        return [];
+    }
+
 }
