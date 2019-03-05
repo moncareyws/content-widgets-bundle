@@ -1,12 +1,17 @@
 {% if config.edit %}
     {% include '@content_widgets/widget_templates/base/widget_container_editable.html.twig' %}
+
+    <div class="widget-drop-area"></div>
 {% else %}
-<div id="{{ container.name }}-widgetcontainer" class="widgetcontainer {{ container.name }}-widgetcontainer">
-    {% endif %}
+    <div id="{{ container.name }}-widgetcontainer" class="widgetcontainer {{ container.name }}-widgetcontainer">
+{% endif %}
 
-    {% for widget in container.widgets %}
-        {{ render_widget(widget) }}
-    {% endfor %}
+        {% for widget in container.widgets %}
+            {{ render_widget(widget) }}
+        {% endfor %}
 
-</div>
+{% if config.edit and container.widgets %}
+    <div class="widget-drop-area"></div>
+{% endif %}
+    </div>
 
