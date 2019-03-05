@@ -39,7 +39,7 @@
     }
   }
 
-  > [data-container-toolbar], > [data-widgets-toolbar] {
+  > [data-container-toolbar], > [data-widget-toolbar] {
     position: relative;
     display: block;
     margin: -0.1875rem -0.1875rem 0.125rem;
@@ -149,6 +149,27 @@
 
 .container-versions .button-group {
   margin: 0;
+}
+
+[draggable=true] {
+  -khtml-user-drag: element;
+}
+
+.widget-placeholder {
+  background: #cccccc;
+  height: 4rem;
+  border: 1px dashed #999999;
+}
+
+.widget-drop-area {
+  background: #cccccc;
+  height: 0;
+  border: 0 dashed #999999;
+
+  .widgetcontainer.dragover & {
+    height: 4rem;
+    border-width: 1px;
+  }
 }
 
 //.reveal .row {

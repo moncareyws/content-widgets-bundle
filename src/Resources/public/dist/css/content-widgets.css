@@ -1,98 +1,77 @@
 .widgetcontainer, .widget {
   position: relative;
   display: block; }
-
-.widgetcontainer::before, .widgetcontainer::after, .widget::before, .widget::after {
-  display: table;
-  content: ' '; }
-
-.widgetcontainer::after, .widget::after {
-  clear: both; }
+  .widgetcontainer::before, .widgetcontainer::after, .widget::before, .widget::after {
+    display: table;
+    content: ' '; }
+  .widgetcontainer::after, .widget::after {
+    clear: both; }
 
 .editable.widgetcontainer, .editable .widgetcontainer, .editable .widget {
   outline: 1px dashed #e6e6e6;
   padding: 0.125rem; }
-
-.editable.widgetcontainer .widget, .editable .widgetcontainer .widget, .editable .widget .widget {
-  margin-bottom: 0.1875rem; }
-
-.editable.widgetcontainer .widget:last-child, .editable .widgetcontainer .widget:last-child, .editable .widget .widget:last-child {
-  margin-bottom: 0; }
-
-.editable.widgetcontainer .widget.hidden-widget:after, .editable .widgetcontainer .widget.hidden-widget:after, .editable .widget .widget.hidden-widget:after {
-  content: '';
-  position: absolute;
-  display: block;
-  top: 2.125rem;
-  left: -0.0625rem;
-  right: -0.0625rem;
-  bottom: -0.0625rem;
-  background: -webkit-repeating-linear-gradient(135deg, rgba(202, 202, 202, 0.4), rgba(202, 202, 202, 0.4) 1rem, rgba(138, 138, 138, 0.6) 1rem, rgba(138, 138, 138, 0.6) 2rem);
-  background: repeating-linear-gradient(-45deg, rgba(202, 202, 202, 0.4), rgba(202, 202, 202, 0.4) 1rem, rgba(138, 138, 138, 0.6) 1rem, rgba(138, 138, 138, 0.6) 2rem); }
-
-.editable.widgetcontainer .widget .widgetcontainer, .editable .widgetcontainer .widget .widgetcontainer, .editable .widget .widget .widgetcontainer {
-  height: 100%;
-  min-height: 5rem; }
-
-.editable.widgetcontainer > [data-container-toolbar], .editable.widgetcontainer > [data-widget-toolbar], .editable .widgetcontainer > [data-container-toolbar], .editable .widgetcontainer > [data-widget-toolbar], .editable .widget > [data-container-toolbar], .editable .widget > [data-widget-toolbar] {
-  position: relative;
-  display: block;
-  margin: -0.1875rem -0.1875rem 0.125rem;
-  background: #e6e6e6; }
-
-.editable.widgetcontainer > [data-container-toolbar]::before, .editable.widgetcontainer > [data-container-toolbar]::after, .editable.widgetcontainer > [data-widget-toolbar]::before, .editable.widgetcontainer > [data-widget-toolbar]::after, .editable .widgetcontainer > [data-container-toolbar]::before, .editable .widgetcontainer > [data-container-toolbar]::after, .editable .widgetcontainer > [data-widget-toolbar]::before, .editable .widgetcontainer > [data-widget-toolbar]::after, .editable .widget > [data-container-toolbar]::before, .editable .widget > [data-container-toolbar]::after, .editable .widget > [data-widget-toolbar]::before, .editable .widget > [data-widget-toolbar]::after {
-  display: table;
-  content: ' '; }
-
-.editable.widgetcontainer > [data-container-toolbar]::after, .editable.widgetcontainer > [data-widget-toolbar]::after, .editable .widgetcontainer > [data-container-toolbar]::after, .editable .widgetcontainer > [data-widget-toolbar]::after, .editable .widget > [data-container-toolbar]::after, .editable .widget > [data-widget-toolbar]::after {
-  clear: both; }
-
-.editable.widgetcontainer > [data-container-toolbar] .button-group, .editable.widgetcontainer > [data-widget-toolbar] .button-group, .editable .widgetcontainer > [data-container-toolbar] .button-group, .editable .widgetcontainer > [data-widget-toolbar] .button-group, .editable .widget > [data-container-toolbar] .button-group, .editable .widget > [data-widget-toolbar] .button-group {
-  margin: 0; }
-
-.editable.widgetcontainer > [data-container-toolbar] .button-group .has-tip, .editable.widgetcontainer > [data-widget-toolbar] .button-group .has-tip, .editable .widgetcontainer > [data-container-toolbar] .button-group .has-tip, .editable .widgetcontainer > [data-widget-toolbar] .button-group .has-tip, .editable .widget > [data-container-toolbar] .button-group .has-tip, .editable .widget > [data-widget-toolbar] .button-group .has-tip {
-  cursor: pointer; }
-
-.editable.widgetcontainer > [data-container-toolbar] .container-label, .editable.widgetcontainer > [data-widget-toolbar] .container-label, .editable .widgetcontainer > [data-container-toolbar] .container-label, .editable .widgetcontainer > [data-widget-toolbar] .container-label, .editable .widget > [data-container-toolbar] .container-label, .editable .widget > [data-widget-toolbar] .container-label {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: 0.85em 1em; }
-
-.editable.widgetcontainer > [data-container-toolbar] .toggle-hidden .icon-show, .editable.widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-show, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden .icon-show, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-show, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden .icon-show, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-show, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden .icon-show, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-show, .editable .widget > [data-container-toolbar] .toggle-hidden .icon-show, .editable .widget > [data-container-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-show, .editable .widget > [data-widget-toolbar] .toggle-hidden .icon-show, .editable .widget > [data-widget-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-show {
-  display: block; }
-
-.editable.widgetcontainer > [data-container-toolbar] .toggle-hidden .icon-hide, .editable.widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-hide, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden .icon-hide, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-hide, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden .icon-hide, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-hide, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden .icon-hide, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-hide, .editable .widget > [data-container-toolbar] .toggle-hidden .icon-hide, .editable .widget > [data-container-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-hide, .editable .widget > [data-widget-toolbar] .toggle-hidden .icon-hide, .editable .widget > [data-widget-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-hide {
-  display: none; }
-
-.editable.widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden .icon-show, .editable.widgetcontainer > [data-container-toolbar] .toggle-hidden:hover .icon-show, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden .icon-show, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden:hover .icon-show, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden .icon-show, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden:hover .icon-show, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden .icon-show, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden:hover .icon-show, .editable .widget > [data-container-toolbar] .toggle-hidden.widget-is-hidden .icon-show, .editable .widget > [data-container-toolbar] .toggle-hidden:hover .icon-show, .editable .widget > [data-widget-toolbar] .toggle-hidden.widget-is-hidden .icon-show, .editable .widget > [data-widget-toolbar] .toggle-hidden:hover .icon-show {
-  display: none; }
-
-.editable.widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden .icon-hide, .editable.widgetcontainer > [data-container-toolbar] .toggle-hidden:hover .icon-hide, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden .icon-hide, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden:hover .icon-hide, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden .icon-hide, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden:hover .icon-hide, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden .icon-hide, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden:hover .icon-hide, .editable .widget > [data-container-toolbar] .toggle-hidden.widget-is-hidden .icon-hide, .editable .widget > [data-container-toolbar] .toggle-hidden:hover .icon-hide, .editable .widget > [data-widget-toolbar] .toggle-hidden.widget-is-hidden .icon-hide, .editable .widget > [data-widget-toolbar] .toggle-hidden:hover .icon-hide {
-  display: block; }
+  .editable.widgetcontainer .widget, .editable .widgetcontainer .widget, .editable .widget .widget {
+    margin-bottom: 0.1875rem; }
+    .editable.widgetcontainer .widget:last-child, .editable .widgetcontainer .widget:last-child, .editable .widget .widget:last-child {
+      margin-bottom: 0; }
+    .editable.widgetcontainer .widget.hidden-widget::after, .editable .widgetcontainer .widget.hidden-widget::after, .editable .widget .widget.hidden-widget::after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 2.125rem;
+      left: -0.0625rem;
+      right: -0.0625rem;
+      bottom: -0.0625rem;
+      background: -webkit-repeating-linear-gradient(135deg, rgba(202, 202, 202, 0.4), rgba(202, 202, 202, 0.4) 1rem, rgba(138, 138, 138, 0.6) 1rem, rgba(138, 138, 138, 0.6) 2rem);
+      background: repeating-linear-gradient(-45deg, rgba(202, 202, 202, 0.4), rgba(202, 202, 202, 0.4) 1rem, rgba(138, 138, 138, 0.6) 1rem, rgba(138, 138, 138, 0.6) 2rem); }
+    .editable.widgetcontainer .widget .widgetcontainer, .editable .widgetcontainer .widget .widgetcontainer, .editable .widget .widget .widgetcontainer {
+      height: 100%;
+      min-height: 5rem; }
+  .editable.widgetcontainer > [data-container-toolbar], .editable.widgetcontainer > [data-widget-toolbar], .editable .widgetcontainer > [data-container-toolbar], .editable .widgetcontainer > [data-widget-toolbar], .editable .widget > [data-container-toolbar], .editable .widget > [data-widget-toolbar] {
+    position: relative;
+    display: block;
+    margin: -0.1875rem -0.1875rem 0.125rem;
+    background: #e6e6e6; }
+    .editable.widgetcontainer > [data-container-toolbar]::before, .editable.widgetcontainer > [data-container-toolbar]::after, .editable.widgetcontainer > [data-widget-toolbar]::before, .editable.widgetcontainer > [data-widget-toolbar]::after, .editable .widgetcontainer > [data-container-toolbar]::before, .editable .widgetcontainer > [data-container-toolbar]::after, .editable .widgetcontainer > [data-widget-toolbar]::before, .editable .widgetcontainer > [data-widget-toolbar]::after, .editable .widget > [data-container-toolbar]::before, .editable .widget > [data-container-toolbar]::after, .editable .widget > [data-widget-toolbar]::before, .editable .widget > [data-widget-toolbar]::after {
+      display: table;
+      content: ' '; }
+    .editable.widgetcontainer > [data-container-toolbar]::after, .editable.widgetcontainer > [data-widget-toolbar]::after, .editable .widgetcontainer > [data-container-toolbar]::after, .editable .widgetcontainer > [data-widget-toolbar]::after, .editable .widget > [data-container-toolbar]::after, .editable .widget > [data-widget-toolbar]::after {
+      clear: both; }
+    .editable.widgetcontainer > [data-container-toolbar] .button-group, .editable.widgetcontainer > [data-widget-toolbar] .button-group, .editable .widgetcontainer > [data-container-toolbar] .button-group, .editable .widgetcontainer > [data-widget-toolbar] .button-group, .editable .widget > [data-container-toolbar] .button-group, .editable .widget > [data-widget-toolbar] .button-group {
+      margin: 0; }
+      .editable.widgetcontainer > [data-container-toolbar] .button-group .has-tip, .editable.widgetcontainer > [data-widget-toolbar] .button-group .has-tip, .editable .widgetcontainer > [data-container-toolbar] .button-group .has-tip, .editable .widgetcontainer > [data-widget-toolbar] .button-group .has-tip, .editable .widget > [data-container-toolbar] .button-group .has-tip, .editable .widget > [data-widget-toolbar] .button-group .has-tip {
+        cursor: pointer; }
+    .editable.widgetcontainer > [data-container-toolbar] .container-label, .editable.widgetcontainer > [data-widget-toolbar] .container-label, .editable .widgetcontainer > [data-container-toolbar] .container-label, .editable .widgetcontainer > [data-widget-toolbar] .container-label, .editable .widget > [data-container-toolbar] .container-label, .editable .widget > [data-widget-toolbar] .container-label {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      font-size: 0.75rem;
+      line-height: 1;
+      padding: 0.85em 1em; }
+    .editable.widgetcontainer > [data-container-toolbar] .toggle-hidden .icon-show, .editable.widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-show, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden .icon-show, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-show, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden .icon-show, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-show, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden .icon-show, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-show, .editable .widget > [data-container-toolbar] .toggle-hidden .icon-show, .editable .widget > [data-container-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-show, .editable .widget > [data-widget-toolbar] .toggle-hidden .icon-show, .editable .widget > [data-widget-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-show {
+      display: block; }
+    .editable.widgetcontainer > [data-container-toolbar] .toggle-hidden .icon-hide, .editable.widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-hide, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden .icon-hide, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-hide, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden .icon-hide, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-hide, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden .icon-hide, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-hide, .editable .widget > [data-container-toolbar] .toggle-hidden .icon-hide, .editable .widget > [data-container-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-hide, .editable .widget > [data-widget-toolbar] .toggle-hidden .icon-hide, .editable .widget > [data-widget-toolbar] .toggle-hidden.widget-is-hidden:hover .icon-hide {
+      display: none; }
+    .editable.widgetcontainer > [data-container-toolbar] .toggle-hidden:hover .icon-show, .editable.widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden .icon-show, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden:hover .icon-show, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden .icon-show, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden:hover .icon-show, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden .icon-show, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden:hover .icon-show, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden .icon-show, .editable .widget > [data-container-toolbar] .toggle-hidden:hover .icon-show, .editable .widget > [data-container-toolbar] .toggle-hidden.widget-is-hidden .icon-show, .editable .widget > [data-widget-toolbar] .toggle-hidden:hover .icon-show, .editable .widget > [data-widget-toolbar] .toggle-hidden.widget-is-hidden .icon-show {
+      display: none; }
+    .editable.widgetcontainer > [data-container-toolbar] .toggle-hidden:hover .icon-hide, .editable.widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden .icon-hide, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden:hover .icon-hide, .editable.widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden .icon-hide, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden:hover .icon-hide, .editable .widgetcontainer > [data-container-toolbar] .toggle-hidden.widget-is-hidden .icon-hide, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden:hover .icon-hide, .editable .widgetcontainer > [data-widget-toolbar] .toggle-hidden.widget-is-hidden .icon-hide, .editable .widget > [data-container-toolbar] .toggle-hidden:hover .icon-hide, .editable .widget > [data-container-toolbar] .toggle-hidden.widget-is-hidden .icon-hide, .editable .widget > [data-widget-toolbar] .toggle-hidden:hover .icon-hide, .editable .widget > [data-widget-toolbar] .toggle-hidden.widget-is-hidden .icon-hide {
+      display: block; }
 
 .editable.preview.widgetcontainer {
   outline: none;
   padding: 0; }
-
-.editable.preview.widgetcontainer .widget {
-  margin-bottom: 0; }
-
-.editable.preview.widgetcontainer .widget .column, .editable.preview.widgetcontainer .widget .columns, .editable.preview.widgetcontainer .widget .columns {
-  height: auto !important; }
-
-.editable.preview.widgetcontainer .widget .widgetcontainer {
-  height: auto;
-  min-height: 0; }
-
-.editable.preview.widgetcontainer [data-container-toolbar], .editable.preview.widgetcontainer [data-widget-toolbar] {
-  display: none !important; }
-
-.editable.preview.widgetcontainer > [data-container-toolbar], .editable.preview.widgetcontainer > [data-widget-toolbar] {
-  display: block !important;
-  margin: -0.0625rem -0.0625rem 0.125rem; }
+  .editable.preview.widgetcontainer .widget {
+    margin-bottom: 0; }
+    .editable.preview.widgetcontainer .widget .cell {
+      height: auto !important; }
+    .editable.preview.widgetcontainer .widget .widgetcontainer {
+      height: auto;
+      min-height: 0; }
+  .editable.preview.widgetcontainer [data-container-toolbar], .editable.preview.widgetcontainer [data-widget-toolbar] {
+    display: none !important; }
+  .editable.preview.widgetcontainer > [data-container-toolbar], .editable.preview.widgetcontainer > [data-widget-toolbar] {
+    display: block !important;
+    margin: -0.0625rem -0.0625rem 0.125rem; }
 
 .editable.preview .widgetcontainer, .editable.preview .widget {
   outline: none;
@@ -107,16 +86,18 @@
 .container-versions .button-group {
   margin: 0; }
 
-.reveal .row {
-  margin-right: -0.625rem;
-  margin-left: -0.625rem; }
+[draggable=true] {
+  -khtml-user-drag: element; }
 
-@media print, screen and (min-width: 40em) {
-  .reveal .row {
-    margin-right: -0.9375rem;
-    margin-left: -0.9375rem; } }
+.widget-placeholder {
+  background: #cccccc;
+  height: 4rem;
+  border: 1px dashed #999999; }
 
-@media print, screen and (min-width: 64em) {
-  .reveal .row {
-    margin-right: -0.9375rem;
-    margin-left: -0.9375rem; } }
+.widget-drop-area {
+  background: #cccccc;
+  height: 0;
+  border: 0 dashed #999999; }
+  .widgetcontainer.dragover .widget-drop-area {
+    height: 4rem;
+    border-width: 1px; }
